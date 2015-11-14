@@ -1,15 +1,15 @@
 {
-    "name": "hermanzhu/l_sight",
+    "name": "hermanzhu/l_insight",
     "authors": [
         {
-            "name": "朱士亚",
+            "name": "herman",
             "email": "i@imzsy.com"
         }
     ],
     "require": {},
     "autoload": {
         "psr-4": {
-            "Sight\\": "src/"
+            "Insight\\": "src/"
         }
-    },
+    }
 }
