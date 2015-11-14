@@ -8,12 +8,18 @@
 
 namespace Insight;
 
-
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
 
+    protected $defer = false;
+
     public function register()
     {
-        dd(app('view'));
+//        dump('register');
+    }
+
+    public function boot()
+    {
+//        dump('boot');
     }
 }
