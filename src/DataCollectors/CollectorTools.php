@@ -11,13 +11,27 @@ namespace Insight\DataCollectors;
 
 trait CollectorTools
 {
-    public function hidePassword(array $data)
+    public function fuzzyPassword(array $data)
     {
         foreach ($data as $k => &$v) {
             if ((strpos($k, 'pass') !== false)) {
-                $v = '**';
+                $v = '**fuzzy**';
             }
         }
         return $data;
     }
+
+    public function removeElementsFromArray(array $data, array $rubbish)
+    {
+        if (count($rubbish) === 0) {
+            return $data;
+        }
+        foreach ($rubbish as $item) {
+            if (isset($data[$item])) {
+                unset($data[$item]);
+            }
+        }
+        return $data;
+    }
+
 }

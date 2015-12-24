@@ -2,14 +2,14 @@
 /**
  * Created by PhpStorm.
  * User: zhushiya
- * Date: 11/15/15
- * Time: 1:48 AM
+ * Date: 12/24/15
+ * Time: 11:07 AM
  */
 
 namespace Insight\DataCollectors;
 
 
-interface CollectorInterface
+class ResponseCollector
 {
 
 }
