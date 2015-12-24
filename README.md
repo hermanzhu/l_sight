@@ -2,5 +2,10 @@
 
 
 
-### TO DO LIST
+``` php
+[
+	Jenssegers\Mongodb\MongodbServiceProvider::class,
+    Insight\ServiceProvider::class,
+]
+```
 
