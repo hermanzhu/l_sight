@@ -52,12 +52,12 @@ class KernelCollector
             $responseData['content'] = $response->getContent();
         }
         if ($response instanceof Response && isset($response->original)
-            && $request->original instanceof View) {
+            && $response->original instanceof View) {
             $responseData['type'] = 'view';
             $responseData['content'] = [
                 'view' => $response->original->getName(),
                 'path' => $response->original->getPath(),
-                'data' => $response->original->getData(),
+                'data' => $this->removeObjectAndNil($response->original->getData()),
             ];
         }
 

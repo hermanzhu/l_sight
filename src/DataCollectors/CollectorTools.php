@@ -34,4 +34,20 @@ trait CollectorTools
         return $data;
     }
 
+    public function removeObjectAndNil(array $data)
+    {
+        if (count($data) === 0) {
+            return $data;
+        }
+        foreach ($data as $k => &$v) {
+            if (is_object($v)) {
+                $v = get_class($v);
+            }
+            if (empty($v)) {
+                $v = 'nil';
+            }
+        }
+        return $data;
+    }
+
 }
