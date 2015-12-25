@@ -46,6 +46,9 @@ trait CollectorTools
             if (empty($v)) {
                 $v = 'nil';
             }
+            if (is_array($v)) {
+                $v = $this->removeObjectAndNil($v);
+            }
         }
         return $data;
     }
